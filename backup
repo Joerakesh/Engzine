@@ -40,15 +40,15 @@ html {
 }
 
 .header .logo img {
-  height: 7rem;
-  width: 25rem;
+  height: 6rem;
+  width: 30rem;
 }
 
 .header .navbar a {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: black;
-  margin: 0 2rem;
+  margin: 0 1rem;
   font-size: 1.5rem;
 }
 
@@ -59,20 +59,12 @@ html {
   padding-bottom: 0.5rem;
 }
 
-.header .icons a {
-  text-transform: uppercase;
-  cursor: pointer;
-  color: var(--main-color);
-  font-size: 2rem;
-  margin-left: 2rem;
-}
-
-.header .icons div {
+.header .icons a,
+div {
   text-transform: uppercase;
   cursor: pointer;
   color: black;
   font-size: 2rem;
-  margin-left: 2rem;
 }
 
 .header .icons a:hover {
@@ -239,6 +231,8 @@ html {
     outline: none;
   }
 }
+
+/* Hero Section */
 #logo_hero {
   float: inline-end;
 }
@@ -246,9 +240,6 @@ html {
 #text_bottom {
   margin-top: 300px;
 }
-
-/* Hero Section */
-
 .hero-header {
   background: url(/img/3.jpg);
   background-size: cover;
@@ -354,52 +345,83 @@ html {
 #btn-color-join:hover {
   color: var(--main-color);
 }
-/* Footer */
-.footer-48201 {
-  padding: 7rem 0;
-  background-color: #000;
-  color: white;
-  font-size: 13px;
-}
-.footer-48201 .footer-site-logo {
-  font-size: 1.5rem;
-  color: #fff;
-}
-.footer-48201 .nav-links li {
-  margin-bottom: 10px;
-}
-.footer-48201 .nav-links li a {
-  font-size: 15px;
-  color: white;
-}
-.footer-48201 .nav-links li a:hover {
-  color: var(--main-color);
-}
-.footer-48201 .btn.btn-tertiary {
-  background-color: var(--main-color);
-  color: #fff;
-  border-radius: 30px;
-  border: none;
-  padding: 10px 20px;
-}
-.footer-48201 .social li {
-  display: inline-block;
-}
-.footer-48201 .social li a {
-  color: gray;
-  padding: 7px;
-}
-.footer-48201 .social li a:hover {
-  color: #fff;
-}
-.footer-48201 .copyright {
-  border-top: 1px solid #404040;
-}
-/* Team Section */
 
-#letter-spacing {
-  letter-spacing: 1px;
+/*** Footer ***/
+.footer .btn.btn-social {
+  margin-right: 5px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  font-weight: normal;
+  border: 1px solid #ffffff;
+  border-radius: 45px;
+  transition: 0.3s;
 }
+
+.footer .btn.btn-social:hover {
+  color: var(--primary);
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  font-size: 15px;
+  border-top: 1px solid rgba(256, 256, 256, 0.1);
+}
+
+.footer .copyright a {
+  color: var(--light);
+}
+
+.footer .footer-menu a {
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .footer-menu a:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
+#fluid1 {
+  float: center;
+}
+.footer .row g-2 pt-2 {
+  height: 790px;
+  width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Team Section */
 .our-team {
   padding: 30px 0 40px;
   margin-bottom: 30px;
@@ -411,8 +433,8 @@ html {
 
 .our-team .picture {
   display: inline-block;
-  height: 150px;
-  width: 180px;
+  height: 130px;
+  width: 130px;
   margin-bottom: 50px;
   z-index: 1;
   position: relative;
@@ -451,8 +473,8 @@ html {
 
 .our-team .picture img {
   cursor: pointer;
-  width: 500px;
-  height: 28vh;
+  width: 400px;
+  height: 25vh;
   border-radius: 15%;
   transform: scale(1);
   transition: all 0.9s ease 0s;
@@ -1048,26 +1070,4 @@ html {
   .text-blk.subHeadingText {
     font-size: 24px;
   }
-}
-
-.wrapper {
-  padding: 70px 0;
-  overflow-x: hidden;
-}
-
-.submissions {
-  display: flex;
-  margin: 15vh;
-  margin: 5vh;
-  align-items: center;
-  justify-content: center;
-  height: 560px;
-}
-
-.podcast-gallery {
-  display: flex;
-  margin-top: 18vh;
-  margin-left: 5vh;
-  margin-bottom: 5vh;
-  gap: 2vh;
 }
