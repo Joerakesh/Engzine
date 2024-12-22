@@ -27,52 +27,11 @@
       rel="stylesheet"
     />
   </head>
+  
   <body>
     <!-- Header Section Starts -->
 
-    <header class="header">
-      <a href="/index.html" class="logo">
-        <img src="/img/logo_new.png" alt="logo" />
-      </a>
-
-      <nav class="navbar">
-        <a href="/index.html">home</a>
-        <div class="dropdown has-dropdown">
-          <a href="#" onclick="toggleDropdown(this)">about</a>
-          <div class="dropdown-content">
-            <a href="/components/about/college.html">college</a>
-            <a href="/components/about/department.html">department</a>
-            <a href="/components/about/engzine.html">engzine</a>
-            <a href="/components/about/team.html">team</a>
-            <!-- <a href="components/about/current_issue.html">current issue</a> -->
-          </div>
-        </div>
-        <div class="dropdown has-dropdown">
-          <a href="#" onclick="toggleDropdown(this)">issues</a>
-
-          <div class="dropdown-content">
-            <a href="/components/about/current_issue.html">current issue</a>
-            <a href="/components/archieves.html">archieves</a>
-          </div>
-        </div>
-        <a href="/components/podcast.html">podcast</a>
-        <a href="/components/podcast.html">Editorial board</a>
-        <a href="/components/contact.html">contact</a>
-        <a href="/components/feedback.html">feedback</a>
-        <a href="/components/submissions.html">Submissions</a>
-      </nav>
-
-      <div class="icons">
-        <a href="" id="btn-color-join"><i class="fa-brands fa-youtube"></i></a>
-        <a href="" id="btn-color-join"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a href="" id="btn-color-join"
-          ><i class="fa-brands fa-x-twitter"></i
-        ></a>
-        <div class="fas fa-bars" id="menu-btn"></div>
-      </div>
-    </header>
+    <my-header></my-header>
 
     <!-- Header Section Ends -->
     <!-- College Section Starts -->
@@ -212,5 +171,9 @@
     <!-- Footer End -->
     <!-- JS link -->
     <script src="js/script.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="module" src="/js/headerfooter.js"></script>
   </body>
 </html>

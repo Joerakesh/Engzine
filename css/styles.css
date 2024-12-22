@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tangerine:wght@400;700&display=swap");
 
 :root {
   --main-color: #06bbcc;
@@ -32,11 +33,12 @@ html {
   justify-content: space-between;
   padding: 1.5rem;
   border-bottom: var(--border);
-  position: fixed;
+
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  position: sticky;
 }
 
 .header .logo img {
@@ -92,14 +94,14 @@ html {
 
 /* media query */
 
-@media (max-width: 1211px) {
+@media (max-width: 1369px) {
   html {
     font-size: 55%;
     padding: 1.5rem 2rem;
   }
 }
 
-@media (max-width: 1211px) {
+@media (max-width: 1369px) {
   #menu-btn {
     display: inline-block;
   }
@@ -252,7 +254,7 @@ html {
 .hero-header {
   background: url(/img/3.jpg);
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
 }
 
 .btn-play {
