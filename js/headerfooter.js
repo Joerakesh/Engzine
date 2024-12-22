@@ -27,7 +27,7 @@ class MyHeader extends HTMLElement {
           </div>
         </div>
         <a href="/components/podcast.html">podcast</a>
-        <a href="/components/podcast.html">Editorial board</a>
+        <a href="/components/editorial_board.html">Editorial board</a>
         <a href="/components/contact.html">contact</a>
         <a href="/components/feedback.html">feedback</a>
         <a href="/components/submissions.html">Submissions</a>

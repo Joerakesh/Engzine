@@ -1073,3 +1073,84 @@ html {
   margin-bottom: 5vh;
   gap: 2vh;
 }
+
+/* Editorial Board */
+/* Main Content */
+.content {
+  padding-right: 5vh;
+  padding-left: 5vh;
+  margin: 5vh auto;
+}
+
+/* Section Titles */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  color: #004aad;
+  border-bottom: 2px solid #004aad;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  background-color: #f9fbfd;
+  padding: 15px 20px;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  word-wrap: break-word; /* Prevent overflow */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #e3e9f1;
+}
+
+.card p {
+  font-size: 1.5rem;
+  margin: 8px 0;
+}
+
+/* Card Links */
+.card a {
+  text-decoration: none;
+  color: #004aad;
+}
+
+.card a:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card:hover {
+  color: var(--main-color);
+}
