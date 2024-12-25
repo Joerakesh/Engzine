@@ -1,0 +1,141 @@
+body {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #04a2b2;
+}
+
+/* Header */
+header {
+  background: #06bbcc;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid #04a2b2;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-family: "Fredoka One", cursive;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 22px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.hero-image img {
+  max-width: 100%; /* Makes the image responsive */
+  max-height: 280px; /* Fixes the maximum height */
+  width: auto; /* Keeps the aspect ratio */
+  height: auto; /* Keeps the aspect ratio */
+  border-radius: 15px; /* Smooth corners */
+  border: 5px solid #06bbcc; /* Adds the border */
+  display: block; /* Ensures proper alignment */
+  margin: 0 auto; /* Centers the image */
+}
+
+.hero-content {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  color: #06bbcc;
+  margin-bottom: 15px;
+  font-family: "Fredoka One", cursive;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.hero-content a.button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #06bbcc;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 5px 15px rgba(6, 187, 204, 0.4);
+}
+
+.hero-content a.button:hover {
+  background: #04a2b2;
+  transform: translateY(-5px);
+}
+
+/* Columns Section */
+.columns-section {
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.column {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.column h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #06bbcc;
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column ul li {
+  margin-bottom: 15px;
+  font-size: 1.45rem;
+}
+
+.column ul li a {
+  color: #666;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.column ul li a:hover {
+  color: #06bbcc;
+}

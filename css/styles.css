@@ -33,7 +33,6 @@ html {
   justify-content: space-between;
   padding: 1.5rem;
   border-bottom: var(--border);
-
   top: 0;
   left: 0;
   right: 0;
@@ -113,6 +112,7 @@ html {
     background: #fff;
     width: 30rem;
     height: calc(100vh -9.5rem);
+    display: inline-grid;
   }
   .header .navbar.active {
     right: 0;
@@ -176,7 +176,7 @@ html {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 /* Hamburger menu styles for smaller screens */
-@media (max-width: 1211px) {
+@media (max-width: 1369px) {
   #menu-btn {
     display: inline-block;
   }
@@ -190,6 +190,7 @@ html {
     height: calc(100vh - 9.5rem);
     overflow-y: auto;
     transition: right 0.3s ease-in-out;
+    display: inline-grid;
   }
 
   .header .navbar.active {
