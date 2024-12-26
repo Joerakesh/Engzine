@@ -24,6 +24,44 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .background {
+        background: linear-gradient(to right, #06bbcc, #004e5c);
+        animation: gradientShift 10s ease-in-out infinite;
+      }
+      .form-container {
+        margin-left: 250px;
+        width: 100%;
+        max-width: 1000px; /* Allow maximum width */
+        height: auto; /* Ensure full height of the viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        backdrop-filter: blur(11px);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        overflow: hidden;
+      }
+
+      @media (max-width: 1369px) {
+        .form-container {
+          margin-left: 0;
+        }
+      }
+      @keyframes gradientShift {
+        0% {
+          background: linear-gradient(to right, #06bbcc, #004e5c);
+        }
+        50% {
+          background: linear-gradient(to right, #004e5c, #06bbcc);
+        }
+        100% {
+          background: linear-gradient(to right, #06bbcc, #004e5c);
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Header Section Starts -->
@@ -80,7 +118,19 @@
 
     <!-- Header Section Ends -->
     <!-- Content -->
-
+    <div class="background">
+      <div class="form-container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeZTnQIpaIz_8QYENLcLTg6GXZFsaz1vKh7JUhaG4vzB55VuQ/viewform?embedded=true"
+          width="640"
+          height="3805"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          >Loading…</iframe
+        >
+      </div>
+    </div>
     <!-- Content -->
     <!-- Footer Start -->
     <footer class="footer-48201">
@@ -176,10 +226,9 @@
     </footer>
     <!-- Footer End -->
     <!-- JS link -->
-    <script src="js/script.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="module" src="/js/headerfooter.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>

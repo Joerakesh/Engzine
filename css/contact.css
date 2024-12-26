@@ -1,0 +1,159 @@
+/* Importing professional fonts (Roboto, Lora, Merriweather) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&display=swap");
+
+/* Gradient Background for the entire section with primary color and animation */
+#contact {
+  background: linear-gradient(
+    to right,
+    #06bbcc,
+    #004e5c
+  ); /* Primary color and a complementary dark shade */
+  padding: 80px 0;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  animation: gradientShift 10s ease-in-out infinite; /* Smooth left-to-right gradient animation */
+  margin-bottom: 5px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(to right, #06bbcc, #004e5c);
+  }
+  50% {
+    background: linear-gradient(to right, #004e5c, #06bbcc);
+  }
+  100% {
+    background: linear-gradient(to right, #06bbcc, #004e5c);
+  }
+}
+
+/* Header Styling */
+#contact h2 {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 3em;
+  color: white;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInHeader 2s ease-out;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Container Styling */
+#contact .container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Styling Contact Columns */
+.contact-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact-info,
+.map-container {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 15px;
+  padding: 20px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent background for glass effect */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover,
+.map-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Information */
+.contact-info h3 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #fff; /* White text for better visibility */
+  font-weight: 700;
+  font-family: "Lora", serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info p {
+  font-size: 1.9em;
+  margin: 8px 0;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff; /* Ensures text is visible over the blurred background */
+}
+
+.contact-info a {
+  color: #fff; /* Primary color for links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #004e5c; /* Darker shade of the primary color */
+}
+
+/* Smaller Icons with Enhanced Visibility */
+.contact-info i {
+  font-size: 1.5em;
+  color: #f2f2f2; /* Light gray to contrast with the background */
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.contact-info i:hover {
+  color: #06bbcc; /* Change color to primary color on hover */
+}
+
+/* Map Styling */
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  #contact .container {
+    width: 90%;
+  }
+
+  .contact-columns {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .map-container {
+    min-width: 100%;
+  }
+}

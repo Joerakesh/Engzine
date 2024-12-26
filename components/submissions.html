@@ -24,6 +24,44 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .background {
+        background: linear-gradient(to right, #06bbcc, #004e5c);
+        animation: gradientShift 10s ease-in-out infinite;
+      }
+      .form-container {
+        margin-left: 250px;
+        width: 100%;
+        max-width: 1000px; /* Allow maximum width */
+        height: auto; /* Ensure full height of the viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        backdrop-filter: blur(11px);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        overflow: hidden;
+      }
+
+      @media (max-width: 1369px) {
+        .form-container {
+          margin-left: 0;
+        }
+      }
+      @keyframes gradientShift {
+        0% {
+          background: linear-gradient(to right, #06bbcc, #004e5c);
+        }
+        50% {
+          background: linear-gradient(to right, #004e5c, #06bbcc);
+        }
+        100% {
+          background: linear-gradient(to right, #06bbcc, #004e5c);
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Header Section Starts -->
@@ -79,22 +117,21 @@
     </header>
 
     <!-- Header Section Ends -->
-    <div class="submissions">
-      <iframe
-        width="740px"
-        height="560px"
-        src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAWNHE4dUODk5SFQ4UVcxQVRZRE41UjAzMVNYVENQQy4u&embed=true"
-        frameborder="0"
-        marginwidth="0"
-        marginheight="0"
-        style="border: none; max-width: 100%; max-height: 100vh"
-        allowfullscreen
-        webkitallowfullscreen
-        mozallowfullscreen
-        msallowfullscreen
-      >
-      </iframe>
+    <!-- Content -->
+    <div class="background">
+      <div class="form-container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScJa6Orkx6WKqh5zbKosrk_Yz1b3RoQdWNAicAvGQbrW84OQQ/viewform?embedded=true"
+          width="640"
+          height="4777"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          >Loading…</iframe
+        >
+      </div>
     </div>
+    <!-- Content -->
     <!-- Footer Start -->
     <footer class="footer-48201">
       <div class="container">
@@ -189,10 +226,9 @@
     </footer>
     <!-- Footer End -->
     <!-- JS link -->
-    <script src="js/script.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="module" src="/js/headerfooter.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
