@@ -79,44 +79,99 @@
     </header>
 
     <!-- Header Section Ends -->
-    <div class="podcast-gallery">
-      <div class="titles">
-        <p class="text-blk headingText">Podcasts</p>
-        <p class="text-blk subHeadingText">
+    <section id="podcasts" style="padding: 40px 20px">
+      <div class="container" style="max-width: 1200px; margin: 0 auto">
+        <h2 class="podcast-title">Podcast</h2>
+        <p class="podcast-subtitle">
           Engzine - "Sharing voices, valuing efforts"
         </p>
+
+        <!-- First Video Section -->
+        <div class="first-video">
+          <iframe
+            class="featured-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dawXINoFHrs?si=5zmfike2kHMuaQHm"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <!-- Smaller Videos Section -->
+        <div class="video-grid">
+          <iframe
+            class="small-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/WmAOD2TORdc?si=LBmR28Sruhqrpvyr"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="small-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/lJWIakrNPoA?si=IiMgwhKGWqIN2LfY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="small-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/h9Q_eeV9BWY?si=3lOiQkPQtfAZWt8P"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="small-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/8-5GRCBE-3Y?si=5Dl4CNy1ow-EjadV"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="small-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/-WtfB2EaEeo?si=gVTbbn_s4FRZeMqP"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="small-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/AymkUKUYV2A?si=wl_BRsh7IaAZP9hF"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/WmAOD2TORdc?si=8zRHmAKzcoMWZ7kH"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/WmAOD2TORdc?si=8zRHmAKzcoMWZ7kH"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/WmAOD2TORdc?si=8zRHmAKzcoMWZ7kH"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    </div>
+    </section>
     <!-- Footer Start -->
     <footer class="footer-48201">
       <div class="container">
@@ -211,26 +266,7 @@
     </footer>
     <!-- Footer End -->
     <!-- JS link -->
-    <script>
-      const section = document.querySelector("section"),
-        mainVideo = document.querySelector(".main-video video"),
-        videos = document.querySelectorAll(".videos"),
-        close = document.querySelector(".close");
-      for (var i = 0; i < videos.length; i++) {
-        videos[i].addEventListener("click", (e) => {
-          const target = e.target;
-          section.classList.add("active");
-          target.classList.add("active");
-          let src = document.querySelector(".videos.active video").src;
-          mainVideo.src = src;
-          close.addEventListener("click", () => {
-            section.classList.remove("active");
-            target.classList.remove("active");
-            mainVideo.src = "";
-          });
-        });
-      }
-    </script>
+
     <script src="/js/script.js"></script>
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/popper.min.js"></script>
