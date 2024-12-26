@@ -1155,3 +1155,69 @@ html {
 .card:hover {
   color: var(--main-color);
 }
+
+/* Team */
+
+/* Container for the Cards */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual Card Styling */
+.team-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 170px; /* Increased image size */
+  height: 180px; /* Increased image size */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Information Section */
+.info-section {
+  padding: 20px;
+}
+
+/* Team Name */
+.team-name {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 10px 0;
+  background: linear-gradient(to right, #06bbcc, #34d9dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Team Role */
+.team-role {
+  font-size: 1em;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
