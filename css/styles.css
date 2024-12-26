@@ -1332,7 +1332,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
   background-color: #f8f8f8;
   height: 90vh;
 }
@@ -1395,7 +1395,6 @@ html {
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
-
     padding: 20px 20px;
   }
 
