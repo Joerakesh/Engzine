@@ -260,7 +260,7 @@ html {
   width: 100%;
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 500px) {
   .hero-header {
     background-image: url(/img/hero.jpg);
     background-size: cover;
@@ -1119,7 +1119,7 @@ html {
   padding: 15px 20px;
   border: 1px solid #d9e2ec;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   text-align: left;
   text-decoration: none;
   color: #333;
@@ -1129,7 +1129,7 @@ html {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(6, 187, 204, 0.2);
   background-color: #e3e9f1;
 }
 
@@ -1190,7 +1190,7 @@ html {
 
 .team-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 24px rgba(6, 187, 204, 0.3);
 }
 
 /* Profile Section */
@@ -1230,4 +1230,100 @@ html {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&family=Poppins:wght@400;700&display=swap");
+
+/* Updated Header Styling */
+.team-header {
+  position: relative;
+  text-align: center;
+  padding: 70px 20px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #06bbcc, #2e8ea5, #00a9c2, #06bbcc);
+  background-size: 400% 400%; /* Animate gradient */
+  animation: gradient-flow 6s ease infinite;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Animated Gradient */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Subtle Background Effects */
+.team-header::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+.team-header::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+/* Header Content */
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.team-header h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  margin: 0 0 10px;
+  background: linear-gradient(90deg, #ffffff, #ffebcc, #cceeff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-glow 6s ease infinite;
+  letter-spacing: 2px;
+}
+
+/* Glow Effect for Gradient Text */
+@keyframes text-glow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.team-header p {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
