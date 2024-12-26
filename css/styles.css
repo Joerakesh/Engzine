@@ -258,10 +258,11 @@ html {
   height: 90vh;
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 445px) {
   .hero-header {
-    background: url(/img/hero.png);
-    background-size: cover;
+    background-image: url(/img/hero.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 90vh;
   }
 }
