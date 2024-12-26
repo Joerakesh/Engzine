@@ -264,7 +264,7 @@ html {
   .hero-header {
     background-image: url(/img/hero.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center center;
     height: 90vh;
   }
 }
