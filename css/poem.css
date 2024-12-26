@@ -14,8 +14,6 @@ body {
   margin: 20px auto;
   padding: 20px;
   background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
-  /* border-radius: 12px;
-  border: 1px solid #ccc; */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,4 +37,44 @@ body {
   font-size: 18px;
   line-height: 1.8;
   text-align: justify;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+  .poem-container {
+    padding: 15px;
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .poem-container h2 {
+    font-size: 28px;
+  }
+
+  .poem-container .author {
+    font-size: 14px;
+  }
+
+  .poem-container .poem {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .poem-container {
+    padding: 10px;
+  }
+
+  .poem-container h2 {
+    font-size: 24px;
+  }
+
+  .poem-container .author {
+    font-size: 12px;
+  }
+
+  .poem-container .poem {
+    font-size: 14px;
+  }
 }

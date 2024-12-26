@@ -37,7 +37,8 @@
         <img src="/img/logo_new.png" alt="logo" />
       </a>
 
-      <nav class="navbar">
+      <!-- Navbar container -->
+      <nav class="navbar" id="navbar">
         <a href="/index.html">home</a>
         <div class="dropdown has-dropdown">
           <a href="#" onclick="toggleDropdown(this)">about</a>
@@ -46,12 +47,10 @@
             <a href="/components/about/department.html">department</a>
             <a href="/components/about/engzine.html">magazine</a>
             <a href="/components/about/team.html">team</a>
-            <!-- <a href="components/about/current_issue.html">current issue</a> -->
           </div>
         </div>
         <div class="dropdown has-dropdown">
           <a href="#" onclick="toggleDropdown(this)">issues</a>
-
           <div class="dropdown-content">
             <a href="/components/current_issue.html">current issue</a>
             <a href="/components/archieves.html">archieves</a>
@@ -65,20 +64,23 @@
       </nav>
 
       <div class="icons">
-        <a href="https://www.youtube.com/@TheEngzine" id="btn-color-join"
-          ><i class="fa-brands fa-youtube"></i
-        ></a>
+        <a href="https://www.youtube.com/@TheEngzine" id="btn-color-join">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
         <a
           href="https://www.instagram.com/the.engzine/?igsh=NmR4aGlzMjVwYXhl#"
           id="btn-color-join"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
         <a
           href="https://x.com/The_Engzine?t=ngZ6WdzHZIxyIeOlbRZ-RA&s=09"
           id="btn-color-join"
-          ><i class="fa-brands fa-x-twitter"></i
-        ></a>
-        <div class="fas fa-bars" id="menu-btn"></div>
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <!-- Hamburger Menu Icon -->
+        <div class="fas fa-bars" id="menu-btn" onclick="toggleNavbar()"></div>
       </div>
     </header>
 

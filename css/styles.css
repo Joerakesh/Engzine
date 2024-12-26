@@ -258,6 +258,13 @@ html {
   height: 90vh;
 }
 
+@media (max-width: 1320px) {
+  .hero-header {
+    background: url(/img/hero.png);
+    background-size: cover;
+    height: 90vh;
+  }
+}
 .btn-play {
   position: relative;
   display: block;
