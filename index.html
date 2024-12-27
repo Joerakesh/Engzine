@@ -60,7 +60,15 @@
         <a href="/components/editorial_board.html">Editorial board</a>
         <a href="/components/contact.html">contact</a>
         <a href="/components/feedback.html">feedback</a>
-        <a href="/components/submissions.html">Submissions</a>
+        <div class="dropdown has-dropdown">
+          <a href="#" onclick="toggleDropdown(this)">submissions</a>
+          <div class="dropdown-content">
+            <a href="/components/guidelines.html">guidelines</a>
+            <a href="/components/faq.html">faq</a>
+            <a href="/components/archieves.html">plagiarism policy</a>
+            <a href="/components/archieves.html">submit</a>
+          </div>
+        </div>
       </nav>
 
       <div class="icons">
@@ -80,7 +88,7 @@
           <i class="fa-brands fa-x-twitter"></i>
         </a>
         <!-- Hamburger Menu Icon -->
-        <div class="fas fa-bars" id="menu-btn" onclick="toggleNavbar()"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
       </div>
     </header>
 
@@ -252,62 +260,83 @@
     <div class="team-container">
       <!-- Team Member 1 -->
       <div class="team-card">
-        <div class="profile-section">
-          <img
-            src="/img/principal.jpg"
-            alt="Team Member 1"
-            class="committee-profile-pic"
-          />
-        </div>
-        <div class="info-section">
-          <h3 class="committee-name">Rev. Dr. S. Mariadoss SJ</h3>
-          <p class="committee-role">Principal</p>
-        </div>
+        <a
+          href="https://www.sjctni.edu/Department/StaffProfile/F01CO07.pdf"
+          target="_blank"
+        >
+          <div class="profile-section">
+            <img
+              src="/img/principal.jpg"
+              alt="Team Member 1"
+              class="committee-profile-pic"
+            />
+          </div>
+          <div class="info-section">
+            <h3 class="committee-name">Rev. Dr. S. Mariadoss SJ</h3>
+            <p class="committee-role">Principal</p>
+          </div></a
+        >
       </div>
       <!-- Team Member 2 -->
       <div class="team-card">
-        <div class="profile-section">
-          <img
-            src="/img/hod1.jpg"
-            alt="Team Member 1"
-            class="committee-profile-pic"
-          />
-        </div>
-        <div class="info-section">
-          <h3 class="committee-name">Dr. V. L. Jayapaul</h3>
-          <p class="committee-role">Head & Associate Professor</p>
-        </div>
+        <a
+          href="https://www.sjctni.edu/Department/StaffProfile/T01EN06.pdf"
+          target="_blank"
+        >
+          <div class="profile-section">
+            <img
+              src="/img/hod1.jpg"
+              alt="Team Member 1"
+              class="committee-profile-pic"
+            />
+          </div>
+          <div class="info-section">
+            <h3 class="committee-name">Dr. V. L. Jayapaul</h3>
+            <p class="committee-role">Head & Associate Professor</p>
+          </div>
+        </a>
       </div>
       <!-- Team Member 3 -->
       <div class="team-card">
-        <div class="profile-section">
-          <img
-            src="/img/cod.jpg"
-            alt="Team Member 1"
-            class="committee-profile-pic"
-          />
-        </div>
-        <div class="info-section">
-          <h3 class="committee-name">Dr. J. Charles Arockiasawy</h3>
-          <p class="committee-role">Assistant Professor & coordinator</p>
-        </div>
+        <a
+          href="https://www.sjctni.edu/Department/StaffProfile/F13EN11.pdf"
+          target="_blank"
+        >
+          <div class="profile-section">
+            <img
+              src="/img/cod.jpg"
+              alt="Team Member 1"
+              class="committee-profile-pic"
+            />
+          </div>
+          <div class="info-section">
+            <h3 class="committee-name">Dr. J. Charles Arockiasawy</h3>
+            <p class="committee-role">Assistant Professor & coordinator</p>
+          </div></a
+        >
       </div>
       <!-- Team Member 4 -->
       <div class="team-card">
-        <div class="profile-section">
-          <img
-            src="/img/prss.jpg"
-            alt="Team Member 1"
-            class="committee-profile-pic"
-          />
-        </div>
-        <div class="info-section">
-          <h3 class="committee-name">Mr. Prasanth Arokia Samy D</h3>
-          <p class="committee-role">Assistant Professor & Chief Editor</p>
-        </div>
+        <a
+          href="https://www.sjctni.edu/Department/StaffProfile/T22EN51.pdf"
+          target="_blank"
+        >
+          <div class="profile-section">
+            <img
+              src="/img/prss.jpg"
+              alt="Team Member 1"
+              class="committee-profile-pic"
+            />
+          </div>
+          <div class="info-section">
+            <h3 class="committee-name">Mr. Prasanth Arokia Samy D</h3>
+            <p class="committee-role">Assistant Professor & Chief Editor</p>
+          </div></a
+        >
       </div>
     </div>
     <!-- Staff Section Ends -->
+    <br />
     <!-- Team Section Start -->
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
       <h1 class="mb-5 text-blk subHeadingText">Student Team</h1>
@@ -316,14 +345,67 @@
       <!-- Team Member 1 -->
       <div class="team-card">
         <div class="profile-section">
-          <img src="/img/91.jpg" alt="Team Member 1" class="profile-pic" />
+          <img src="/img/95.jpg" alt="Team Member 1" class="profile-pic" />
         </div>
         <div class="info-section">
-          <h3 class="team-name">VIRGINIA VARSHINI G</h3>
-          <p class="team-role">Digital Content Creator</p>
+          <h3 class="team-name">DHANUSH M</h3>
+          <p class="team-role">Sub-Editor & Student Incharge</p>
+          <p class="team-email">
+            <a href="mailto:dhanushm.2016.17@gmail.com"
+              >dhanushm.2016.17@gmail.com</a
+            >
+          </p>
         </div>
       </div>
       <!-- Team Member 2 -->
+      <div class="team-card">
+        <div class="profile-section">
+          <img src="/img/94.jpg" alt="Team Member 3" class="profile-pic" />
+        </div>
+        <div class="info-section">
+          <h3 class="team-name">MERLINE I</h3>
+          <p class="team-role">Sub Editor, Copy Editor & Graphic Designer</p>
+          <p class="team-email">
+            <a href="mailto:merlineirudayaraj@gmail.com"
+              >merlineirudayaraj@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="team-card">
+        <div class="profile-section">
+          <img src="/img/93.jpg" alt="Team Member 4" class="profile-pic" />
+        </div>
+        <div class="info-section">
+          <h3 class="team-name">NEVEENA INFANCIA S</h3>
+          <p class="team-role">Sub Editor & Content Editor</p>
+          <p class="team-email">
+            <a href="mailto:contactneveenainfancia@gmail.com"
+              >contactneveenainfancia@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="team-card">
+        <div class="profile-section">
+          <img src="/img/91.jpg" alt="Team Member 5" class="profile-pic" />
+        </div>
+        <div class="info-section">
+          <h3 class="team-name">VIRGINIA VARSHINI G</h3>
+          <p class="team-role">Sub Editor & Digital Content Creator</p>
+          <p class="team-email">
+            <a href="mailto:virginiavarshini@gmail.com"
+              >virginiavarshini@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- Team Member 5 -->
       <div class="team-card">
         <div class="profile-section">
           <img src="/img/92.jpg" alt="Team Member 2" class="profile-pic" />
@@ -331,39 +413,15 @@
         <div class="info-section">
           <h3 class="team-name">LEONAPRIYA G</h3>
           <p class="team-role">Event Coordinator</p>
-        </div>
-      </div>
-      <!-- Team Member 3 -->
-      <div class="team-card">
-        <div class="profile-section">
-          <img src="/img/93.jpg" alt="Team Member 3" class="profile-pic" />
-        </div>
-        <div class="info-section">
-          <h3 class="team-name">MERLINE I</h3>
-          <p class="team-role">Copy Editor and Graphic Designer</p>
-        </div>
-      </div>
-      <!-- Team Member 4 -->
-      <div class="team-card">
-        <div class="profile-section">
-          <img src="/img/94.jpg" alt="Team Member 4" class="profile-pic" />
-        </div>
-        <div class="info-section">
-          <h3 class="team-name">NEVEENA INFANCIA S</h3>
-          <p class="team-role">Content Editor</p>
-        </div>
-      </div>
-      <!-- Team Member 5 -->
-      <div class="team-card">
-        <div class="profile-section">
-          <img src="/img/95.jpg" alt="Team Member 5" class="profile-pic" />
-        </div>
-        <div class="info-section">
-          <h3 class="team-name">DHANUSH M</h3>
-          <p class="team-role">Editor in Chief</p>
+          <p class="team-email">
+            <a href="mailto:leonapriya1610@gmail.com"
+              >leonapriya1610@gmail.com</a
+            >
+          </p>
         </div>
       </div>
     </div>
+
     <!-- Team Section End -->
     <!-- Footer Start -->
     <footer class="footer-48201">

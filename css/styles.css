@@ -7,6 +7,7 @@
   --border: 0.2rem solid rgba(255, 255, 255, 0.3);
   --primary: #06bbcc;
 }
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -1207,6 +1208,17 @@ html {
   object-fit: cover;
 }
 
+.team-email a {
+  font-size: 1.2em;
+  text-transform: none;
+  color: #06bbcc;
+  text-decoration: none;
+}
+
+.team-email a:hover {
+  text-decoration: underline;
+}
+
 /* Information Section */
 .info-section {
   padding: 20px;
@@ -1230,7 +1242,7 @@ html {
 }
 
 .committee-name {
-  font-size: 1.8em;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 10px 0;
   background: linear-gradient(to right, #06bbcc, #34d9dc);
@@ -1239,7 +1251,7 @@ html {
 }
 
 .committee-role {
-  font-size: 1.5em;
+  font-size: 1.3rem;
   color: #333333;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1248,7 +1260,7 @@ html {
 
 /* Team Role */
 .team-role {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #333333;
   text-transform: uppercase;
   letter-spacing: 1px;
