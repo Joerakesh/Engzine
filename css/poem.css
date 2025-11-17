@@ -85,3 +85,8 @@ body {
     font-size: 12px;
   }
 }
+
+.poem p:empty {
+  height: 20px; /* controls blank line spacing */
+  display: block;
+}
