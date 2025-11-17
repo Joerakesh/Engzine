@@ -43,150 +43,52 @@
       <!-- Poems -->
       <div class="column">
         <h2>Poems</h2>
-        <ul>
-          <li>
-            <a href="issue_2/poems/Flap, flap.html">Flap, flap...</a>
-          </li>
-
-          <li>
-            <a href="issue_2/poems/Frozen Hearts, Burning Love.html"
-              >Frozen Hearts, Burning Love</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/poems/MAYBE.html">Maybe</a>
-          </li>
-          <li>
-            <a href="issue_2/poems/Pray.html">Pray</a>
-          </li>
-          <li>
-            <a href="issue_2/poems/The Fallen Sun.html">The Fallen Sun</a>
-          </li>
-          <li>
-            <a href="issue_2/poems/Transpire (Annie).html"
-              >Transpire by Annie Lumina</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/poems/TRANSPIRE (Rex).html"
-              >Transpire by Allwin Rex</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/poems/Unlocking Life Happiness.html"
-              >Unlocking Life’s Happiness</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/poems/When I Return to My Home.html"
-              >When I Return to My Home</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/poems/Zenith.html">Zenith...</a>
-          </li>
-        </ul>
+        <ul id="poem-list" style="text-transform: capitalize !important"></ul>
       </div>
       <!-- Short Stories -->
       <div class="column">
         <h2>Short Stories</h2>
-        <ul>
-          <li>
-            <a href="issue_2/short stories/A Secret Life of Couch Potatoes.html"
-              >A Secret Life of Couch Potatoes</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/short stories/Beyond the Mystery.html"
-              >Beyond the Mystery</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/short stories/Fear to Fame.html">Fear to Fame</a>
-          </li>
-          <li>
-            <a href="issue_2/short stories/The Brilliant Minds.html"
-              >The Brilliant Minds</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/short stories/The Choice.html">The Choice</a>
-          </li>
-          <li>
-            <a href="issue_2/short stories/The Forgotten Secret.html"
-              >The Forgotten Secret</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/short stories/The Girl Who Found Herself.html"
-              >The Girl Who Found Herself</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/short stories/The Silent Burden.html"
-              >The Silent Burden</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/short stories/The Truth Beneath Lies.html"
-              >The Truth Beneath Lies</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/short stories/Unknown Love.html">Unknown Love</a>
-          </li>
-          <li>
-            <a href="issue_2/short stories/When Hope Blossoms.html"
-              >When Hope Blossoms</a
-            >
-          </li>
-          <li>
-            <a href="issue_2/short stories/When Silence Spoke.html"
-              >When Silence Spoke</a
-            >
-          </li>
-        </ul>
+        <ul
+          id="stories-list"
+          style="text-transform: capitalize !important"
+        ></ul>
       </div>
-      <!-- issue_2/essays -->
-      <div class="column">
+      <!-- Essays -->
+      <!-- <div class="column">
         <h2>Essays</h2>
         <ul>
           <li>
-            <a href="issue_2/essay/A Heaven of Learning.html"
-              >A Heaven of Learning</a
-            >
+            <a href="essay/A Heaven of Learning.html">A Heaven of Learning</a>
           </li>
           <li>
-            <a href="issue_2/essay/Dreams to Reality.html">Dreams to Reality</a>
+            <a href="essay/Dreams to Reality.html">Dreams to Reality</a>
           </li>
           <li>
-            <a href="issue_2/essay/How Situations Develop Over Time.html"
+            <a href="essay/How Situations Develop Over Time.html"
               >How Situations Develop Over Time</a
             >
           </li>
           <li>
-            <a href="issue_2/essay/Perceptions Of Women Lensed Out.html"
+            <a href="essay/Perceptions Of Women Lensed Out.html"
               >Perceptions Of Women Lensed Out</a
             >
           </li>
           <li>
-            <a href="issue_2/essay/The Hidden Journey.html"
-              >The Hidden Journey</a
-            >
+            <a href="essay/The Hidden Journey.html">The Hidden Journey</a>
           </li>
           <li>
             <a
-              href="issue_2/essay/The Transpiration of God's Creation in Human Beings.html"
+              href="essay/The Transpiration of God's Creation in Human Beings.html"
               >The Transpiration of God's Creation in Human Beings</a
             >
           </li>
           <li>
-            <a href="issue_2/essay/Truths in Silence.html">Truths in Silence</a>
+            <a href="essay/Truths in Silence.html">Truths in Silence</a>
           </li>
         </ul>
-      </div>
+      </div> -->
       <!-- Articles -->
-      <div class="column">
+      <!-- <div class="column">
         <h2>Articles</h2>
         <div class="column-small">
           <ul>
@@ -234,13 +136,45 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <!-- Footer Start -->
     <special-footer></special-footer>
     <script src="../js/footer1.js"></script>
     <!-- Footer End -->
+
+    <!-- Script -->
+    <script>
+      fetch("../data/poems.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const list = document.getElementById("poem-list");
+          data.poems.forEach((poem, index) => {
+            const li = document.createElement("li");
+
+            li.innerHTML = `
+        <a href="issue_3/poems/view.html?id=${index}">
+          ${poem.title}
+        </a>
+      `;
+            list.appendChild(li);
+          });
+        });
+      // Short Stories
+      // Load Short Stories
+      fetch("../data/stories.json")
+        .then((res) => res.json())
+        .then((stories) => {
+          const list = document.getElementById("stories-list");
+          stories.forEach((story) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="issue_3/short stories/story.html?id=${story.id}">${story.title}</a>`;
+            list.appendChild(li);
+          });
+        });
+    </script>
+
     <!-- JS link -->
     <script src="../js/script.js"></script>
     <script src="../js/jquery-3.3.1.min.js"></script>
