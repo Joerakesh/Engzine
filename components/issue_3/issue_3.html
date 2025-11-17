@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Joe Rakesh" />
+    <!-- Favicon -->
+    <link href="../../img/favicon.ico" rel="icon" />
+    <title>CURRENT ISSUE | ENGZINE</title>
+    <!-- CSS Linking -->
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    />
+    <link rel="stylesheet" href="../../css/issue.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="//static.fliphtml5.com/web/js/plugin/LightBox/js/fliphtml5-light-box-api-min.js"></script>
+  </head>
+  <body>
+    <!-- Header Section Starts -->
+
+    <script src="../../js/header.js"></script>
+    <special-header></special-header>
+    <div style="margin: 6vh">
+      <h1 style="color: white">.</h1>
+    </div>
+    <!-- Header Section Ends -->
+    <h1 id="issn">ISSN: 3049-1363</h1>
+    <!-- Content Here -->
+
+    <div class="columns-section">
+      <!-- Poems -->
+      <div class="column">
+        <h2>Poems</h2>
+        <ul id="poem-list" style="text-transform: capitalize !important"></ul>
+      </div>
+      <!-- Short Stories -->
+      <div class="column">
+        <h2>Short Stories</h2>
+        <ul
+          id="stories-list"
+          style="text-transform: capitalize !important"
+        ></ul>
+      </div>
+      <!-- Essays -->
+      <!-- <div class="column">
+        <h2>Essays</h2>
+        <ul>
+          <li>
+            <a href="essay/A Heaven of Learning.html">A Heaven of Learning</a>
+          </li>
+          <li>
+            <a href="essay/Dreams to Reality.html">Dreams to Reality</a>
+          </li>
+          <li>
+            <a href="essay/How Situations Develop Over Time.html"
+              >How Situations Develop Over Time</a
+            >
+          </li>
+          <li>
+            <a href="essay/Perceptions Of Women Lensed Out.html"
+              >Perceptions Of Women Lensed Out</a
+            >
+          </li>
+          <li>
+            <a href="essay/The Hidden Journey.html">The Hidden Journey</a>
+          </li>
+          <li>
+            <a
+              href="essay/The Transpiration of God's Creation in Human Beings.html"
+              >The Transpiration of God's Creation in Human Beings</a
+            >
+          </li>
+          <li>
+            <a href="essay/Truths in Silence.html">Truths in Silence</a>
+          </li>
+        </ul>
+      </div> -->
+      <!-- Articles -->
+      <!-- <div class="column">
+        <h2>Articles</h2>
+        <div class="column-small">
+          <ul>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1LomTeES46-sBqUFfqNAPdWlxlVWvJDlM/view?usp=sharing"
+                target="_blank"
+                ><p>Merline I</p>
+                <h3>
+                  A Journey of Silence, Melancholy and Resilience through Poetic
+                  Expression
+                </h3></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="column-small">
+          <ul>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1syfK3gXmRO8yJ2K736Va9lPSqzgrhQH8/view?usp=sharing"
+                target="_blank"
+                ><p>Mr. M.Subash & Dr.Mary Lowrencia C</p>
+                <h3>
+                  Edutainment and Mobile Learning – A Study on the Effectiveness
+                  of Mobile Apps in Improving English Speaking Skills Among
+                  Tertiary Students
+                </h3></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="column-small">
+          <ul>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1UEEDiJ81r0x_BtbhFz65heHSL_9gzmV-/view?usp=sharing"
+                target="_blank"
+                ><p>Prasanth Arokia Samy D</p>
+                <h3>
+                  Rethinking Online Courses Using Student Behavior and
+                  Assessment Integrity to go Beyond Accessibility
+                </h3></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- Footer Start -->
+    <special-footer></special-footer>
+    <script src="../../js/footer.js"></script>
+    <!-- Footer End -->
+
+    <!-- Script -->
+    <script>
+      fetch("../../data/poems.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const list = document.getElementById("poem-list");
+          data.poems.forEach((poem, index) => {
+            const li = document.createElement("li");
+
+            li.innerHTML = `
+        <a href="poems/view.html?id=${index}">
+          ${poem.title}
+        </a>
+      `;
+            list.appendChild(li);
+          });
+        });
+      // Short Stories
+      // Load Short Stories
+      fetch("../../data/stories.json")
+        .then((res) => res.json())
+        .then((stories) => {
+          const list = document.getElementById("stories-list");
+          stories.forEach((story) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="short stories/story.html?id=${story.id}">${story.title}</a>`;
+            list.appendChild(li);
+          });
+        });
+    </script>
+
+    <!-- JS link -->
+    <script src="../../js/script.js"></script>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+  </body>
+</html>
