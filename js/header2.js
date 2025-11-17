@@ -61,6 +61,13 @@ class SpecialHeader extends HTMLElement {
           >
             <i class="fa-brands fa-x-twitter"></i>
           </a>
+          <a
+          href="https://open.spotify.com/show/5SPscXGmPCUH72iMSWDPuK?si=-nticEXBS_eT5nHlYgteNg"
+          class="btn-color-join"
+          id="spotify"
+        >
+          <i class="fa-brands fa-spotify"></i>
+        </a>
           <!-- Hamburger Menu Icon -->
           <div class="fas fa-bars" id="menu-btn"></div>
         </div>
