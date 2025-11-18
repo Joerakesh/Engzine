@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Joe Rakesh" />
+    <link href="../../../img/favicon.ico" rel="icon" />
+    <title>ESSAY | ENGZINE</title>
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../../css/guidelines.css" />
+    <link rel="stylesheet" href="../../../css/essay.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script src="../../../js/header2.js"></script>
+    <special-header></special-header>
+
+    <div style="margin: 5vh">
+      <h1 style="color: white">.</h1>
+    </div>
+    <section class="story-title">
+      <h1 id="essay-title">Loading...</h1>
+    </section>
+
+    <main id="main-container"></main>
+
+    <special-footer></special-footer>
+    <script src="../../../js/footer2.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+
+      fetch("../../../data/essays.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const essay = data.essays.find((e) => e.id == id);
+          const mainContainer = document.getElementById("main-container");
+
+          if (!essay) {
+            document.getElementById("essay-title").innerText =
+              "Essay Not Found";
+            return;
+          }
+
+          // Set Title
+          document.getElementById("essay-title").innerText = essay.title;
+
+          // Build HTML like static version
+          let generatedHTML = "";
+
+          essay.sections.forEach((sec) => {
+            if (sec.heading && sec.heading.trim() !== "") {
+              generatedHTML += `
+            <p class="essay-content-title">
+              <strong>${sec.heading}: </strong>
+            </p>
+          `;
+            }
+
+            if (sec.content.includes("<ul") || sec.content.includes("<ol")) {
+              // Lists should NOT be wrapped in <p>
+              generatedHTML += `
+    <div class="essay-content">
+      ${sec.content}
+    </div>
+  `;
+            } else {
+              // Normal text stays in <p>
+              generatedHTML += `
+    <p class="essay-content">
+      ${sec.content}
+    </p>
+  `;
+            }
+          });
+
+          // Author
+          generatedHTML += `
+        <p class="story-author">Written by ${essay.author}</p>
+        <hr class="hr-4" />
+      `;
+
+          mainContainer.innerHTML = generatedHTML;
+        });
+    </script>
+  </body>
+</html>

@@ -24,6 +24,7 @@ q {
   font-size: 18px;
   color: rgb(53, 49, 49);
   font-family: "Raleway", sans-serif;
+  margin-right: 15vh;
 }
 
 .story-title h1 {
@@ -36,4 +37,12 @@ q {
   color: var(--primary-color);
   margin-bottom: 5px;
   font-weight: 700;
+}
+
+.essay-content ul,
+.essay-content ol,
+.essay-content li {
+  margin-left: 2vh;
+  font-size: 1.5rem; /* or the size of your paragraph */
+  line-height: 1.6;
 }
