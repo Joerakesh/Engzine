@@ -54,52 +54,23 @@
         ></ul>
       </div>
       <!-- Essays -->
-      <!-- <div class="column">
+      <div class="column">
         <h2>Essays</h2>
-        <ul>
-          <li>
-            <a href="essay/A Heaven of Learning.html">A Heaven of Learning</a>
-          </li>
-          <li>
-            <a href="essay/Dreams to Reality.html">Dreams to Reality</a>
-          </li>
-          <li>
-            <a href="essay/How Situations Develop Over Time.html"
-              >How Situations Develop Over Time</a
-            >
-          </li>
-          <li>
-            <a href="essay/Perceptions Of Women Lensed Out.html"
-              >Perceptions Of Women Lensed Out</a
-            >
-          </li>
-          <li>
-            <a href="essay/The Hidden Journey.html">The Hidden Journey</a>
-          </li>
-          <li>
-            <a
-              href="essay/The Transpiration of God's Creation in Human Beings.html"
-              >The Transpiration of God's Creation in Human Beings</a
-            >
-          </li>
-          <li>
-            <a href="essay/Truths in Silence.html">Truths in Silence</a>
-          </li>
-        </ul>
-      </div> -->
+        <ul id="essays-list"></ul>
+      </div>
       <!-- Articles -->
-      <!-- <div class="column">
+      <div class="column">
         <h2>Articles</h2>
         <div class="column-small">
           <ul>
             <li>
               <a
-                href="https://drive.google.com/file/d/1LomTeES46-sBqUFfqNAPdWlxlVWvJDlM/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Frp4_r8ACfcr2vYUBKGQtK2bioVuUooO/view?usp=drive_link"
                 target="_blank"
-                ><p>Merline I</p>
+                ><p>J. Michael Sammanasu</p>
                 <h3>
-                  A Journey of Silence, Melancholy and Resilience through Poetic
-                  Expression
+                  A COMPARATIVE ANALYSIS OF IGNATIAN PEDAGOGICAL PARADIGM (IPP)
+                  AND NEP 2020 IN HIGHER EDUCATION: A VALUE-BASED EDUCATION
                 </h3></a
               >
             </li>
@@ -109,13 +80,13 @@
           <ul>
             <li>
               <a
-                href="https://drive.google.com/file/d/1syfK3gXmRO8yJ2K736Va9lPSqzgrhQH8/view?usp=sharing"
+                href="https://drive.google.com/file/d/1JvkSeglQ4aILlVEMk8YtAujPeJG8H4H4/view?usp=drive_link"
                 target="_blank"
                 ><p>Mr. M.Subash & Dr.Mary Lowrencia C</p>
                 <h3>
-                  Edutainment and Mobile Learning – A Study on the Effectiveness
-                  of Mobile Apps in Improving English Speaking Skills Among
-                  Tertiary Students
+                  BLENDING EDUTAINMENT WITH LANGUAGE PEDAGOGY TO IMPROVE
+                  TERTIARY STUDENTS’ SPEAKING SKILLS IN A FLIPPED LEARNING
+                  ENVIRONMENT
                 </h3></a
               >
             </li>
@@ -125,18 +96,44 @@
           <ul>
             <li>
               <a
-                href="https://drive.google.com/file/d/1UEEDiJ81r0x_BtbhFz65heHSL_9gzmV-/view?usp=sharing"
+                href="https://drive.google.com/file/d/1nqpR3_w0DockwNNDi3tQupnATh0OBWBu/view?usp=drive_link"
                 target="_blank"
-                ><p>Prasanth Arokia Samy D</p>
+                ><p>Alagu Revathi L & Jaya Shri M</p>
                 <h3>
-                  Rethinking Online Courses Using Student Behavior and
-                  Assessment Integrity to go Beyond Accessibility
+                  REKINDLING MINDS: ENCOURAGING BOOK REVIEW AND FILM
+                  APPRECIATION AMONG TODAY’S STUDENTS
                 </h3></a
               >
             </li>
           </ul>
         </div>
-      </div> -->
+        <div class="column-small">
+          <ul>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1IXESCmHC71UgZyqYmRyN7eZqQrf_YVZ6/view?usp=drive_link"
+                target="_blank"
+                ><p>John Naveena Serlin K</p>
+                <h3>
+                  SHORT FORMS AND LINGUISTIC CHANGE IN DIGITAL COMMUNICATION
+                </h3></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="column-small">
+          <ul>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1gC42nnLclWoefKeKjcO7cVuiUmgWrmsp/view?usp=drive_link"
+                target="_blank"
+                ><p>Caro Velma J</p>
+                <h3>CADBURY 5 STAR AND THE IDEA OF POSITIVE LAZINESS</h3></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Footer Start -->
@@ -170,6 +167,21 @@
           stories.forEach((story) => {
             const li = document.createElement("li");
             li.innerHTML = `<a href="short stories/story.html?id=${story.id}">${story.title}</a>`;
+            list.appendChild(li);
+          });
+        });
+
+      // Essays
+      fetch("../../data/essays.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const list = document.getElementById("essays-list");
+          data.essays.forEach((essay) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+        <a href="essays/view.html?id=${essay.id}">
+          ${essay.title}
+        </a>`;
             list.appendChild(li);
           });
         });
