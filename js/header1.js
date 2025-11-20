@@ -68,6 +68,15 @@ class SpecialHeader extends HTMLElement {
         >
           <i class="fa-brands fa-spotify"></i>
         </a>
+         <a
+          href="https://play.google.com/store/apps/details?id=edu.sjctni.engzine.android"
+          class="btn-color-join"
+          id="playstore"
+          target="_blank"
+          title="Get the Engzine App"
+        >
+          <i class="fa-brands fa-google-play"></i>
+        </a>
         <!-- Hamburger Menu Icon -->
         <div class="fas fa-bars" id="menu-btn"></div>
       </div>

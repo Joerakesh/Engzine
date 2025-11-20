@@ -5,7 +5,6 @@ class SpecialHeader extends HTMLElement {
         <img src="../../img/logo_new.png" alt="logo" />
       </a>
 
-      <!-- Navbar container -->
       <nav class="navbar" id="navbar">
         <a href="../../index.html">home</a>
         <div class="dropdown has-dropdown">
@@ -40,35 +39,39 @@ class SpecialHeader extends HTMLElement {
       </nav>
 
       <div class="icons">
-        <a
-          href="https://www.youtube.com/@TheEngzine"
-          class="btn-color-join"
-          id="youtube"
-        >
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@TheEngzine" class="btn-color-join" id="youtube">
           <i class="fa-brands fa-youtube"></i>
         </a>
-        <a
-          href="https://www.instagram.com/the.engzine/?igsh=NmR4aGlzMjVwYXhl#"
-          class="btn-color-join"
-          id="instagram"
-        >
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/the.engzine/?igsh=NmR4aGlzMjVwYXhl#" class="btn-color-join" id="instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
-        <a
-          href="https://x.com/The_Engzine?t=ngZ6WdzHZIxyIeOlbRZ-RA&s=09"
-          class="btn-color-join"
-          id="x"
-        >
+
+        <!-- Twitter -->
+        <a href="https://x.com/The_Engzine?t=ngZ6WdzHZIxyIeOlbRZ-RA&s=09" class="btn-color-join" id="x">
           <i class="fa-brands fa-x-twitter"></i>
         </a>
-        <a
-          href="https://open.spotify.com/show/5SPscXGmPCUH72iMSWDPuK?si=-nticEXBS_eT5nHlYgteNg"
-          class="btn-color-join"
-          id="spotify"
-        >
+
+        <!-- Spotify -->
+        <a href="https://open.spotify.com/show/5SPscXGmPCUH72iMSWDPuK?si=-nticEXBS_eT5nHlYgteNg" class="btn-color-join" id="spotify">
           <i class="fa-brands fa-spotify"></i>
         </a>
-        <!-- Hamburger Menu Icon -->
+
+        <!-- Play Store (Header Icon Only) -->
+        <a
+          href="https://play.google.com/store/apps/details?id=edu.sjctni.engzine.android"
+          class="btn-color-join"
+          id="playstore"
+          target="_blank"
+          title="Get the Engzine App"
+        >
+          <i class="fa-brands fa-google-play"></i>
+        </a>
+
+        <!-- Hamburger -->
         <div class="fas fa-bars" id="menu-btn"></div>
       </div>
     </header>`;

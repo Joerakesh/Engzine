@@ -78,6 +78,22 @@ class SpecialFooter extends HTMLElement {
               </ul>
   
               <hr />
+                <!-- Play Store Section -->
+            <h3 style="color:white;">Download Our App</h3>
+            <a
+              href="https://play.google.com/store/apps/details?id=edu.sjctni.engzine.android"
+              target="_blank"
+              
+            >
+              <img 
+                src="../../../img/google-play-badge.png"
+                alt="Get it on Google Play"
+                style="width:100px; "
+              />
+             
+            </a>
+
+            <hr />
               <ul class="list-unstyled nav-links">
                 
                 <h3 style="color: white">Website Developers</h3>

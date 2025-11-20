@@ -191,6 +191,13 @@ a {
   color: red;
 }
 
+#playstore {
+  color: black;
+}
+
+#playstore:hover {
+  color: var(--main-color);
+}
 #instagram {
   color: black;
 }
