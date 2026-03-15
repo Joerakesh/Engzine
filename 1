@@ -1,0 +1,225 @@
+MongoDB Practical Programs
+1.	Basic Queries using MongoDB
+2.	Creating and Managing Indexes
+3.	Comparison Operators in MongoDB
+4.	Projection Operations in MongoDB
+5.	Aggregation using $group
+6.	Filtering Documents using $match
+7.	Sorting Documents using $sort
+8.	Text Search using $text
+9.	Logical Query Operators ($and, $or, $not)
+10.	Set Operators ($in, $nin, $all)
+1. Basic Queries – students collection
+Example document
+{
+ "rollNo":"23IT101",
+ "name":"Arun",
+ "department":"IT",
+ "semester":5
+}
+ProgramsS[
+1.	Display all students
+db.students.find()
+2.	Display students from IT department
+db.students.find({department:"IT"})
+3.	Display students in semester 3
+db.students.find({semester:3})
+4.	Find student using roll number
+db.students.find({rollNo:"23IT101"})
+5.	Display student names only
+
+db.students.find({}, {name:1})
+2. Indexes – books collection
+Example document
+{
+ "bookId":101,
+ "title":"Database Systems",
+ "author":"Navathe",
+ "category":"Database"
+}
+Programs
+1.	Create index on title
+db.books.createIndex({title:1})
+2.	Create index on author
+db.books.createIndex({author:1})
+3.	Create compound index
+db.books.createIndex({category:1,title:1})
+4.	View indexes
+db.books.getIndexes()
+5.	Drop index
+db.books.dropIndex({title:1})
+3. Comparison Operations – employees
+Example document
+{
+ "empId":201,
+ "name":"Ravi",
+ "salary":45000,
+ "experience":5
+}
+Programs
+1.	Salary greater than 40000
+db.employees.find({salary:{$gt:40000}})
+2.	Salary less than 30000
+db.employees.find({salary:{$lt:30000}})
+3.	Experience greater than or equal to 5
+db.employees.find({experience:{$gte:5}})
+4.	Salary less than or equal to 60000
+db.employees.find({salary:{$lte:60000}})
+5.	Salary not equal to 25000
+db.employees.find({salary:{$ne:25000}})
+ 
+4. Project – courses
+Example document
+{
+ "courseId":301,
+ "courseName":"MongoDB",
+ "duration":"3 Months",
+ "fees":6000
+}
+Programs
+1.	Display course name and fees
+db.courses.find({}, {courseName:1,fees:1})
+2.	Display course name only
+db.courses.find({}, {courseName:1,_id:0})
+3.	Display course duration
+db.courses.find({}, {duration:1})
+4.	Display course id and name
+db.courses.find({}, {courseId:1,courseName:1})
+5.	Display course fees only
+db.courses.find({}, {fees:1})
+5. Group – sales
+Example document
+{
+ "product":"Laptop",
+ "region":"South",
+ "amount":50000
+}
+Programs
+1.	Total sales per region
+db.sales.aggregate([
+{$group:{_id:"$region",totalSales:{$sum:"$amount"}}}
+])
+2.	Average sales per region
+db.sales.aggregate([
+{$group:{_id:"$region",avgSales:{$avg:"$amount"}}}
+])
+3.	Maximum sales per region
+db.sales.aggregate([
+{$group:{_id:"$region",maxSales:{$max:"$amount"}}}
+])
+4.	Minimum sales per region
+db.sales.aggregate([
+{$group:{_id:"$region",minSales:{$min:"$amount"}}}
+])
+5.	Count sales transactions per region
+db.sales.aggregate([
+{$group:{_id:"$region",count:{$sum:1}}}
+])
+6. Match – orders
+Example document
+{
+ "orderId":501,
+ "customer":"Kumar",
+ "amount":1500,
+ "status":"Delivered"
+}
+Programs
+1.	Orders with amount greater than 1000
+db.orders.aggregate([
+{$match:{amount:{$gt:1000}}}
+])
+2.	Delivered orders
+db.orders.aggregate([
+{$match:{status:"Delivered"}}
+])
+3.	Orders less than 500
+db.orders.aggregate([
+{$match:{amount:{$lt:500}}}
+])
+4.	Orders from customer Kumar
+db.orders.aggregate([
+{$match:{customer:"Kumar"}}
+])
+5.	Pending orders
+db.orders.aggregate([
+{$match:{status:"Pending"}}
+])
+7. Sort – products
+Example document
+{
+ "productId":601,
+ "name":"Mobile",
+ "price":20000
+}
+Programs
+1.	Sort products by price ascending
+db.products.find().sort({price:1})
+2.	Sort products by price descending
+db.products.find().sort({price:-1})
+3.	Sort by product name
+db.products.find().sort({name:1})
+4.	Sort by product id
+db.products.find().sort({productId:1})
+5.	Sort by price then name
+db.products.find().sort({price:1,name:1})
+8. Search Text – articles
+Example document
+{
+ "title":"Introduction to MongoDB",
+ "content":"MongoDB is a NoSQL database"
+}
+Programs
+1.	Create text index
+db.articles.createIndex({title:"text",content:"text"})
+2.	Search MongoDB
+db.articles.find({$text:{$search:"MongoDB"}})
+3.	Search NoSQL
+db.articles.find({$text:{$search:"NoSQL"}})
+4.	Search database
+db.articles.find({$text:{$search:"database"}})
+5.	Search multiple words
+
+db.articles.find({$text:{$search:"MongoDB NoSQL"}})
+9. Logical Operations – teachers
+Example document
+{
+ "name":"Priya",
+ "department":"IT",
+ "experience":8
+}
+Programs
+1.	IT teachers with experience >5
+db.teachers.find({
+$and:[{department:"IT"},{experience:{$gt:5}}]
+})
+2.	Teachers from IT or CSE
+db.teachers.find({
+$or:[{department:"IT"},{department:"CSE"}]
+})
+3.	Teachers not from CSE
+db.teachers.find({department:{$ne:"CSE"}})
+4.	Teachers with experience <3
+db.teachers.find({experience:{$lt:3}})
+5.	Teachers with experience >5 OR department ECE
+db.teachers.find({
+$or:[{experience:{$gt:5}},{department:"ECE"}]
+})
+
+10. Set Operations – sports
+Example document
+{
+ "name":"Arun",
+ "games":["Cricket","Football"]
+}
+Programs
+1.	Players who play Cricket
+db.sports.find({games:{$in:["Cricket"]}})
+2.	Players who play Football
+db.sports.find({games:{$in:["Football"]}})
+3.	Players not playing Cricket
+db.sports.find({games:{$nin:["Cricket"]}})
+4.	Players playing Cricket or Tennis
+db.sports.find({games:{$in:["Cricket","Tennis"]}})
+5.	Players not playing Football or Hockey
+db.sports.find({games:{$nin:["Football","Hockey"]}})
+ 
