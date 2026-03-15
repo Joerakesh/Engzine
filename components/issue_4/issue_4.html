@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Joe Rakesh" />
     <!-- Favicon -->
-    <link href="../img/favicon.ico" rel="icon" />
+    <link href="../../img/favicon.ico" rel="icon" />
     <title>CURRENT ISSUE | ENGZINE</title>
     <!-- CSS Linking -->
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
     />
-    <link rel="stylesheet" href="../css/issue.css" />
+    <link rel="stylesheet" href="../../css/issue.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -30,7 +30,7 @@
   <body>
     <!-- Header Section Starts -->
 
-    <script src="../js/header1.js"></script>
+    <script src="../../js/header.js"></script>
     <special-header></special-header>
     <div style="margin: 6vh">
       <h1 style="color: white">.</h1>
@@ -65,7 +65,7 @@
           <ul>
             <li>
               <a
-                href="../data/issue_4/articles/Dr. Sunitha Anilkumar.pdf"
+                href="../../data/issue_4/articles/Dr. Sunitha Anilkumar.pdf"
                 target="_blank"
                 ><p>Dr. Sunitha Anilkumar & Aarthieswari.M</p>
                 <h3>
@@ -79,7 +79,7 @@
           <ul>
             <li>
               <a
-                href="../data/issue_4/articles/Dr. Munna Lal Yadav.pdf"
+                href="../../data/issue_4/articles/Dr. Munna Lal Yadav.pdf"
                 target="_blank"
                 ><p>Dr. Munna Lal Yadav </p>
                 <h3>
@@ -93,7 +93,7 @@
           <ul>
             <li>
               <a
-                href="../data/issue_4/articles/Alagu Revathi L.pdf"
+                href="../../data/issue_4/articles/Alagu Revathi L.pdf"
                 target="_blank"
                 ><p>Alagu Revathi L & Logeshwari D</p>
                 <h3>
@@ -107,7 +107,7 @@
           <ul>
             <li>
               <a
-                href="../data/issue_4/articles/Cohiran.pdf"
+                href="../../data/issue_4/articles/Cohiran.pdf"
                 target="_blank"
                 ><p>Cohiran & Saran Kumar K P</p>
                 <h3>
@@ -121,7 +121,7 @@
           <ul>
             <li>
               <a
-                href="../data/issue_4/articles/Joe Rakesh.pdf"
+                href="../../data/issue_4/articles/Joe Rakesh.pdf"
                 target="_blank"
                 ><p>Joe Rakesh</p>
                 <h3>WEB DESIGN SUPERPOWERS:HOW BCA STUDENTS FUEL SDG 9 FOR STARTUP SUCCESS</h3></a
@@ -131,14 +131,15 @@
         </div>
       </div>
     </div>
+
     <!-- Footer Start -->
     <special-footer></special-footer>
-    <script src="../js/footer1.js"></script>
+    <script src="../../js/footer.js"></script>
     <!-- Footer End -->
 
     <!-- Script -->
     <script>
-      fetch("../data/issue_4/poems.json")
+      fetch("../../data/issue_4/poems.json")
         .then((res) => res.json())
         .then((data) => {
           const list = document.getElementById("poem-list");
@@ -146,7 +147,7 @@
             const li = document.createElement("li");
 
             li.innerHTML = `
-        <a href="issue_4/poems/view.html?id=${index}">
+        <a href="poems/view.html?id=${index}">
           ${poem.title}
         </a>
       `;
@@ -155,26 +156,26 @@
         });
       // Short Stories
       // Load Short Stories
-      fetch("../data/issue_4/stories.json")
+      fetch("../../data/issue_4/stories.json")
         .then((res) => res.json())
         .then((stories) => {
           const list = document.getElementById("stories-list");
           stories.forEach((story) => {
             const li = document.createElement("li");
-            li.innerHTML = `<a href="issue_4/short stories/story.html?id=${story.id}">${story.title}</a>`;
+            li.innerHTML = `<a href="short stories/story.html?id=${story.id}">${story.title}</a>`;
             list.appendChild(li);
           });
         });
 
       // Essays
-      fetch("../data/issue_4/essays.json")
+      fetch("../../data/issue_4/essays.json")
         .then((res) => res.json())
         .then((data) => {
           const list = document.getElementById("essays-list");
           data.essays.forEach((essay) => {
             const li = document.createElement("li");
             li.innerHTML = `
-        <a href="issue_4/essays/view.html?id=${essay.id}">
+        <a href="essays/view.html?id=${essay.id}">
           ${essay.title}
         </a>`;
             list.appendChild(li);
@@ -183,9 +184,9 @@
     </script>
 
     <!-- JS link -->
-    <script src="../js/script.js"></script>
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
   </body>
 </html>

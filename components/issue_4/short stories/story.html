@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Joe Rakesh" />
+    <link href="../../../img/favicon.ico" rel="icon" />
+    <title>STORY | ENGZINE</title>
+
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <link rel="stylesheet" href="../../../css/guidelines.css" />
+    <link rel="stylesheet" href="../../../css/short story.css" />
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script src="../../../js/header2.js"></script>
+    <special-header></special-header>
+
+    <div style="margin: 5vh">
+      <h1 style="color: white">.</h1>
+    </div>
+    <section class="story-title">
+      <h1 id="story-title">Loading Story...</h1>
+    </section>
+
+    <main></main>
+
+    <special-footer></special-footer>
+    <script src="../../../js/footer2.js"></script>
+    <script>
+      // Get the elements we need to fill
+      const titleEl = document.getElementById("story-title");
+      const mainEl = document.querySelector("main");
+
+      // Get the story ID from the URL (e.g., ?id=story-name)
+      const params = new URLSearchParams(window.location.search);
+      const storyId = params.get("id");
+
+      // Fetch the JSON data
+      fetch("../../../data/issue_4/stories.json")
+        .then((response) => response.json())
+        .then((stories) => {
+          const story = stories.find((s) => s.id === storyId);
+
+          // Check if the story was found
+          if (!story) {
+            titleEl.innerText = "Story Not Found";
+            mainEl.innerHTML =
+              "<p>Sorry, we could not find the story you were looking for.</p>";
+            return;
+          }
+
+          // --- Populate the Page ---
+
+          // 1. Set the page title and story headline
+          document.title = story.title.toUpperCase() + " | ENGZINE";
+          titleEl.innerText = story.title;
+
+          // 2. Clear the <main> element
+          mainEl.innerHTML = "";
+
+          // 3. Loop through the flexible content array
+          story.content.forEach((item) => {
+            let el;
+            switch (item.type) {
+              case "p":
+                el = document.createElement("p");
+                el.innerText = item.text;
+                break;
+              case "blockquote":
+                el = document.createElement("blockquote");
+                const quoteP = document.createElement("p");
+                quoteP.innerText = item.text;
+                el.appendChild(quoteP);
+                break;
+              case "h3": // For subtitles like "Moral"
+                el = document.createElement("h3");
+                el.innerText = item.text;
+                break;
+              // You can add more cases here like "img", "h2", etc.
+            }
+            if (el) {
+              mainEl.appendChild(el);
+            }
+          });
+
+          // 4. Add the Author (matches 'Couch Potatoes' layout)
+          const authorEl = document.createElement("p");
+          authorEl.className = "story-author";
+          // Use the author field from the JSON
+          authorEl.innerText = "Written by " + story.author;
+          mainEl.appendChild(authorEl);
+
+          // 5. Add the Horizontal Rule (matches 'Couch Potatoes' layout)
+          const hrEl = document.createElement("hr");
+          hrEl.className = "hr-4";
+          mainEl.appendChild(hrEl);
+        })
+        .catch((error) => {
+          console.error("Error loading story:", error);
+          titleEl.innerText = "Error";
+          mainEl.innerHTML = "<p>There was an error loading the story.</p>";
+        });
+    </script>
+
+    <script src="../../../js/script.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+  </body>
+</html>
